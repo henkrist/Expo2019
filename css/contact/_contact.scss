@@ -1,0 +1,89 @@
+
+
+#map {
+    height: 400px;
+    width: 90vw;  
+    border-radius: 20px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    margin-top: 10vh;
+}
+
+.wrapper {
+    width: 80%;
+    display: flex;
+    margin: auto;
+    padding: 25px 0 100px 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    -webkit-animation: fadein 2s; 
+    animation: fadein 2s;
+}
+
+.infobox:hover{
+    .resize{
+        transform: translateY(-5px);
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    }
+}
+
+.infobox h4 {
+    display: block;
+	position:relative;
+    margin: 0 0 20px 160px;
+    width: 25%;
+    padding-bottom: 0px;
+    cursor: default;
+}
+.infobox h4:before {
+  	content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    bottom: 0;
+    left: 25%;
+}
+.infobox p {
+    display: inline-block;
+    padding: 0 10px 0 15px;
+    margin: auto;
+    width: 40%;
+    text-align: left;
+}
+.infobox a {
+	color: #F1F1F1;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.infobox {
+	align-self: center;
+    padding: 20px;
+    min-width: 400px;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*Image size and frame*/
+.resize {
+    width: 140px;
+    height: 140px;
+    float: left;
+    border-radius: 10%;
+    transition: all 0.3s
+}
+
+.spacer{
+    height: 12vh;
+}
+
+.contact_header{
+    cursor: default;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: $font-large;
+    -webkit-animation: fadein 2s; 
+    animation: fadein 2s;
+}

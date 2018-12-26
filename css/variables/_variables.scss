@@ -1,0 +1,130 @@
+
+//colors
+$color-1: coral;
+$color-2: #f0f8ff;
+$color-3: dimgray;
+$color-4: #151515;
+$color-5: #BA50A9;
+$color-6: #23D5AB;
+$color-7: #23A6D5;
+$color-8: #ffefe1;
+
+$gradient-1: linear-gradient(-45deg, #fdeaaf, #b99db3, #78c7c6, #badab2);
+$gradient-2: linear-gradient(-225deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+
+//fonts
+$default-font: 'Montserrat';
+
+$font-small: 	1em;
+$font-med:  	1.3em;
+$font-large: 	1.8em;
+
+//size
+$S:     480px;
+$SM: 	600px;   
+$M:     800px;     
+$L:     1170px; 
+
+//spacer
+$N: 	25px;
+$W: 	80px;
+
+//animations
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes dash {
+	from {
+	  stroke-dashoffset: 1000;
+	}
+	to {
+	  stroke-dashoffset: 0;
+	}
+}
+
+@-webkit-keyframes hue {
+	from {
+		-webkit-filter: hue-rotate(0deg);
+	}
+	to {
+		-webkit-filter: hue-rotate(-360deg);
+	}
+}
+
+@keyframes fadein {
+	from { 
+		opacity: 0;
+		transform: translateY(20px);
+	}
+    to{ 
+		opacity: 1; 
+		transform: translateY(0);
+	}
+}
+
+@-webkit-keyframes fadein {
+    from { 
+		opacity: 0;
+		transform: translateY(20px);
+	}
+    to{ 
+		opacity: 1; 
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadein2 {
+	from { 
+		opacity: 0;
+		transform: translateY(40px);
+	}
+    to{ 
+		opacity: 1; 
+		transform: translateY(0);
+	}
+}
+
+@-webkit-keyframes fadein2 {
+    from { 
+		opacity: 0;
+		transform: translateY(40px);
+	}
+    to{ 
+		opacity: 1; 
+		transform: translateY(0);
+	}
+}

@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- favicon-->
+    <link rel="shortcut icon" href="img/fav-02.png" type="image/x-icon">
+    <link rel="icon" href="img/fav-02.png" type="image/x-icon">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <title>DesignExpo</title>
+</head>
+
+<body onload="changeCurrentDay()">
+
+    <header>
+        <nav class="nav_desktop">
+            <ul>
+                <li><a href="index.html">hjem</a></li>
+                <li><a href=""id="link_active">arrangementer</a></li>
+                <li><a href="kontakt.html">kontakt</a></li>
+            </ul>
+        </nav>
+
+        <label class="nav_mobile">
+                <input type='checkbox'>
+                <span class='menu'> <span class='hamburger'></span> </span>
+                <ul>
+                  <li><a href="index.html">hjem</a></li>
+                  <li><a href=""id="link_active">arrangementer</a></li>
+                  <li><a href="kontakt.html">kontakt</a></li>
+                </ul>
+            </label>
+    </header>
+
+    <!--
+    <div class="logo">
+        <img src="../Expo_2019/img/expologo.png">
+        <p>Design Expo 2019</p>
+    </div>
+    -->
+
+    <div class="grid-container">
+            <div class="dates">
+                <div class="cd_dates">
+                    <div class="cd_datescont">
+                        <ul id="vertical-nav">
+                            <a href="#28">
+                                <li class="cont_date">
+                                    <div class="date">man<br>28.</div>
+                                </li>
+                             </a>
+
+                             <a href="#29">
+                                <li class="cont_date">
+                                    <div class="date">tir<br>29.</div>
+                                </li>
+                            </a>
+
+                            <a href="#30">
+                                <li class="cont_date">
+                                    <div class="date">ons<br>30.</div>
+                                </li>
+                            </a>
+                            
+                            <a href="#31">
+                                <li class="cont_date">
+                                    <div class="date">tor<br>31.</div>
+                                </li>
+                            </a>
+
+                            <a href="#01">
+                                <li class="cont_date">
+                                    <div class="date">fre<br>01.</div>
+                                </li>
+                            </a>
+                            
+                            <a href="#04">
+                                <li class="cont_date">
+                                    <div class="date">man<br>04.</div>
+                                </li>
+                            </a>
+
+                            <a href="#05">
+                                <li class="cont_date">
+                                    <div class="date">tir<br>05.</div>
+                                </li>
+                            </a>
+
+                            <a href="#06">
+                                <li class="cont_date">
+                                    <div class="date">ons<br>06.</div>
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="events">
+                
+                <div class="spacerW"></div>
+                
+                <h3 class="event_date" id="28">mandag 28. januar</h3>
+                
+                <div class="event_cont">
+                    <div class="event_header">
+                            <h1>offisiell åpning</h1>
+                    </div>
+                    <div class="event_time_place">
+                        <div class="grid-container-event">
+                            <div class="event_time">
+                                12:00
+                            </div>
+                            <div class="event_divider">
+                                <div class="divider"></div>
+                            </div>
+                            <div class="event_place">
+                                IPD
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event_info">
+                        <p class="event_info_text">Mandag inviterer Knowit til workshop på Skiboli! Knowit er et av Norges mest komplette byrå innen kundeopplevelser, kreativ kommunikasjon, performance marketing og webapp-utvikling. Vårt tverrfaglige miljø utvikler i dag innovative tjenester og digitale løsninger for kunder som Ruter, BankID og NSB, og kan vise til suksessprosjekter som Vipps og RuterReise.</p>
+                    </div>
+                    <a class="event_btn">
+                        <div class="event_btn_text">påmelding</div>
+                    </a>
+                </div>
+
+                <div class="spacerN"></div>
+
+                <div class="event_cont">
+                    <div class="event_header">
+                            <h1>BEKK lyntaler</h1>
+                    </div>
+                    <div class="event_time_place">
+                        <div class="grid-container-event">
+                            <div class="event_time">
+                                16:15
+                            </div>
+                            <div class="event_divider">
+                                <div class="divider"></div>
+                            </div>
+                            <div class="event_place">
+                                Skiboli
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event_info">
+                        <p class="event_info_text">Mandag inviterer Knowit til workshop på Skiboli! Knowit er et av Norges mest komplette byrå innen kundeopplevelser, kreativ kommunikasjon, performance marketing og webapp-utvikling. Vårt tverrfaglige miljø utvikler i dag innovative tjenester og digitale løsninger for kunder som Ruter, BankID og NSB, og kan vise til suksessprosjekter som Vipps og RuterReise.</p>
+                    </div>
+                    <a class="event_btn">
+                        <div class="event_btn_text">påmelding</div>
+                    </a>
+                </div>
+
+                <div class="spacerW"></div>
+
+                <h3 class="event_date" id="29">tirsdag 29. januar</h3>
+
+                <div class="event_cont">
+                </div>
+
+                <div class="spacerN"></div>
+
+                <div class="event_cont">
+                    
+                </div>
+
+                <div class="spacerW"></div>
+
+                <h3 class="event_date" id="30">onsdag 30. januar</h3>
+
+                <div class="event_cont">
+                </div>
+
+                <div class="spacerN"></div>
+
+                <div class="event_cont">
+                    
+                </div>
+
+                <div class="spacerW"></div>
+
+                <h3 class="event_date" id="31">torsdag 31. januar</h3>
+
+                <div class="event_cont" id="expo_talks">
+                    <div class="event_header">
+                            <h1>EXPO talks</h1>
+                    </div>
+                    <div class="event_time_place">
+                        <div class="grid-container-event">
+                            <div class="event_time">
+                                10:00
+                            </div>
+                            <div class="event_divider">
+                                <div class="divider"></div>
+                            </div>
+                            <div class="event_place">
+                                EGGS
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event_info">
+                        <p class="event_info_text">Mandag inviterer Knowit til workshop på Skiboli! Knowit er et av Norges mest komplette byrå innen kundeopplevelser, kreativ kommunikasjon, performance marketing og webapp-utvikling. Vårt tverrfaglige miljø utvikler i dag innovative tjenester og digitale løsninger for kunder som Ruter, BankID og NSB, og kan vise til suksessprosjekter som Vipps og RuterReise.</p>
+                    </div>
+                    <a class="event_btn" href="talks.html">
+                        <div class="event_btn_text">påmelding</div>
+                    </a>
+                </div>
+
+                <div class="spacerW"></div>
+
+                <h3 class="event_date" id="01">fredag 01. februar</h3>
+
+                <div class="event_cont">
+                </div>
+
+                <div class="spacerN"></div>
+
+                <div class="event_cont">
+                    
+                </div>
+
+                <div class="spacerW"></div>
+
+                <h3 class="event_date" id="04">mandag 04. februar</h3>
+
+                <div class="event_cont">
+                </div>
+
+                <div class="spacerN"></div>
+
+                <div class="event_cont">
+                    
+                </div>
+
+                <div class="spacerW"></div>
+
+                <h3 class="event_date" id="05">tirsdag 05. februar</h3>
+
+                <div class="event_cont">
+                </div>
+
+                <div class="spacerN"></div>
+
+                <div class="event_cont">
+                    
+                </div>
+
+                <div class="spacerW"></div>
+
+                <h3 class="event_date" id="06">onsdag 06. februar</h3>
+
+                <div class="event_cont">
+                </div>
+
+                <div class="spacerN"></div>
+
+                <div class="event_cont">
+                    
+                </div>
+
+                <div class="spacerW"></div>
+
+            </div>
+            
+            <div class="zero">
+
+            </div>
+        </div>
+
+    <div class="events">
+
+    </div>
+    <script src=”https://raw.githubusercontent.com/camwiegert/in-view/master/dist/in-view.min.js"> </script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/jquery-2.1.1.js"></script>
+</body>
+
+
+
+
+</html>

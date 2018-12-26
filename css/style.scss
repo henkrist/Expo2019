@@ -1,0 +1,120 @@
+
+@import 'variables/_variables';
+@import 'layout/_layout.scss';
+@import 'nav/_nav.scss';
+@import 'arr/_arr.scss';
+@import 'talks/_talks.scss';
+@import 'index/_index.scss';
+@import 'contact/_contact.scss';
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+// Primary style
+html{
+    a:hover, a:visited, a:link, a:active{
+        text-decoration: none;
+    }
+    a:hover{
+        color: #f35626;
+    }
+}
+
+body{
+    font-family: $default-font;
+    background: $gradient-1;
+    background-size: 400% 400%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border: none;
+    overflow: visible;
+    overflow-x: hidden;
+
+    -webkit-animation: Gradient 30s ease infinite;
+	-moz-animation: Gradient 30s ease infinite;
+    animation: Gradient 30s ease infinite;
+    transition: 0.3s all;
+    
+}
+
+::-webkit-scrollbar {
+    width: 0px;  
+    background: transparent; 
+}
+
+
+// Media quieries
+
+@media only screen and (max-width: $S), screen and (max-height: 400px){
+
+    .grid-container{
+        grid-template-columns: 0fr 3fr 0fr;
+    }
+    .contact{
+        width: 100vw;
+    }
+
+    .event_cont{
+        width: 80%;
+    }
+
+    .nav_desktop {
+		display: none;
+    }
+
+    .nav_mobile{
+        display: block;
+    }
+    .cd_dates{
+        display:none;
+    }
+
+    .event_btn{
+        margin-bottom: 10px;
+    }
+
+    .event_info_text{
+        font-size: 11px !important;
+    }
+    
+    .wrapper{
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: $M){
+    body{
+        width: 100%;
+    }
+	.nav_desktop {
+		display: none;
+    }
+    .nav_mobile{
+        display: block;
+    }
+    .cd_dates{
+        display:none;
+    }
+
+    .grid-container{
+        grid-template-columns: 0fr 2.5fr 0fr;
+    }
+
+    .event_cont{
+        width: 90vw;
+    }
+    .event_info_text{
+        font-size: 2.5vw; 
+    }
+
+    #bg{
+        max-height: 70%;
+    }
+    .contact{
+        width: 100vw;
+    }
+    
+}
+
+
+@media only screen and (max-width: $L){
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,MAAM,CAAC;EACH,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,IAAI;EACX,KAAK,EAAE,IAAI;EACX,KAAK,EAAE,GAAG;CACb",
+    "sources": [
+        "arr.scss"
+    ],
+    "names": [],
+    "file": "arr.css"
+}

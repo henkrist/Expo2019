@@ -1,0 +1,41 @@
+
+.back_icon{
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    margin: 30px;
+    cursor: pointer;
+
+    transition: all 0.2;
+
+    -webkit-transition: -webkit-transform .4s ease-in-out;
+    transition: transform .4s ease-in-out;   
+}
+
+.back_icon:hover{
+    //-webkit-transform: rotate(360deg);
+    //transform: rotate(360deg);
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+}
+
+.talks_header{
+    cursor: default;
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+    
+    h1{
+        font-size: 15vw;
+
+        #talks{
+            color: #f35626;
+            background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-animation: hue 15s infinite linear;
+            transition: 0.5s;
+        }
+    }
+
+}

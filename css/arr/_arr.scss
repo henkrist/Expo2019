@@ -1,0 +1,218 @@
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 0.3fr 2.5fr 0.3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "dates events zero";
+}
+  
+.dates { 
+    grid-area: dates; 
+   //@at-root background-color: red;
+}
+
+.events { 
+    grid-area: events; 
+   // background-color: blue;
+    align-content: middle;
+    text-align: center;
+    overflow: auto;
+}
+
+.zero { 
+    grid-area: zero; 
+    z-index: -1;
+    //background-color: green;
+}
+
+//dates
+.cd_dates {
+    height: 100vh;
+    //transform: translateX(5%);
+    text-align: center;
+    position: fixed;
+
+    ul{
+        text-align: center;
+        list-style-type: none;
+    }
+
+    .cd_datescont{
+        display: table;
+        margin: 0 auto;
+        position: relative;                   
+        top: 50%;                             
+        transform: translateY(-50%); 
+    }
+
+    .cont_date{
+        width: 70px;
+        height: 70px;
+        border-color: $color-2;
+        border-style: solid;
+        align-content: center;
+        cursor: pointer;
+        margin: 10px;
+        margin-left: 30px;
+        border-radius: 30% 30% 30% 30%;
+        transition: 0.3s;
+    }
+
+    .date{
+        position: relative;
+        color: $color-4;
+        top: 50%;
+        transform: translateY(-50%); 
+    }
+
+
+    .talks{
+        border: solid;
+        border-color: $color-8;
+    }
+
+    .cont_date:not(.selected):hover{
+        background-color: $color-2;
+        transform: translateY(-5px);
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .today{
+        border: solid;
+        border-color: $color-7; 
+    }
+
+    a.active{
+        color: red;
+    }
+    /*
+    active{
+        color: $color-2;
+        border-color: $color-1;
+        background-color: $color-1;
+        transform: translateY(-5px);
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+        cursor: default;
+    }
+    */
+
+    -webkit-animation: fadein 2s; 
+    animation: fadein 2s;
+}
+
+//events
+.event_cont{
+    height: auto;
+    padding: 30px;
+    width: 60%;
+    z-index: 1;
+    border-radius: 10px;
+    background-color: $color-2;
+    margin: auto;
+    text-align: center;
+    opacity: 0.8;
+    position: relative;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+
+    h1{
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .grid-container-event{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: ". . .";
+        align-content: middle;
+    }
+
+    .event_header{
+        margin: 0 auto;
+        margin-bottom: 10px;
+        opacity: 1;
+    }
+    
+    .event_time_place{
+        //background-color: blue;
+        margin: 0 auto;
+        height: 30px;
+        width: 300px;
+    }
+    .event_divider{
+        height: 100%;
+        width: 100%;
+    }
+    .divider{
+        width: 3px;
+        height: 25px;
+        background-color: $color-1;
+        border-radius: 2px;
+        transform: translateX(50px - 3px/2);
+    }
+    .event_time{
+        float: right;
+        transform: translateX(50px);
+    }
+    .event_place{
+        float: left;
+        transform: translateX(-50px);
+    }
+
+    .event_info{
+        width: 85%;
+        margin: 0 auto;
+        margin-top: 10px;
+        text-align: center;
+        color: $color-4;
+    }
+
+    .event_info_text{
+        color: $color-4;
+        font-size: 14px;
+    }
+
+    .event_btn{
+        display: block;
+        margin: 0 auto;
+        text-decoration: none;
+        cursor: pointer;
+        width: 150px;
+        height: 40px;
+        background-color: $color-5;
+        border-radius: 5px;
+        bottom: 0;
+        transition: all 0.3s;
+    }
+
+    .event_btn_text{
+        transform: translateY(8px);
+        font-weight: bold;
+        color: white;
+    }
+    .event_btn:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    -webkit-animation: fadein 2s; 
+    animation: fadein 2s;
+
+}
+
+#expo_talks{
+    background-color: $color-8;
+}
+
+.event_date{
+    font-weight: bolder;
+    margin-bottom: 10px;
+    opacity: 0.8;
+
+    -webkit-animation: fadein 2s; 
+    animation: fadein 2s;
+}
+
+.scrollTo{
+    transition: 0.5 ease-in-out
+}
