@@ -29,6 +29,7 @@ function changeCurrentDay(){
     }
 }
 
+//gå tilbake 
 function goBack() {
     window.history.back();
 }
