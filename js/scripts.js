@@ -34,42 +34,6 @@ function goBack() {
 }
 
 // scrolling til event og endre nav
-/*
-jQuery(document).ready(function($){
-	var contentSections = $('.event_date'),
-		navigationItems = $('#vertical-nav a');
-
-	updateNavigation();
-	$(window).on('scroll', function(){
-		updateNavigation();
-	});
-
-	navigationItems.on('click', function(event){
-        event.preventDefault();
-        smoothScroll($(this.hash));
-    });
-
-	function updateNavigation() {
-		contentSections.each(function(){
-			$this = $(this);
-			var activeSection = $('#vertical-nav a[href="#'+$this.attr('id')+'"]').data('number') - 1;
-			if ( ( $this.offset().top - $(window).height()/2 < $(window).scrollTop() ) && ( $this.offset().top + $this.height() - $(window).height()/2 > $(window).scrollTop() ) ) {
-				navigationItems.eq(activeSection).addClass("selected");
-			}else {
-				navigationItems.eq(activeSection).removeClass("selected");
-			}
-		});
-	}
-
-	function smoothScroll(target) {
-        $('body,html').animate(
-        	{'scrollTop':target.offset().top - 50},
-        	600
-        );
-	}
-});
-
-*/
 
 var sections = $('.events')
   , nav = $('#vertical-nav')
@@ -106,7 +70,6 @@ nav.find('a').on('click', function () {
 
 
 // map
-
 function initMap() {
     var ipd = {lat: 63.418143, lng: 10.404537};
     var map = new google.maps.Map(
@@ -124,33 +87,37 @@ $(".cd-front").delay(2000).queue(function(next) {
 
 
 // parallax
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  
+} else {
+  var rect = $('#container')[0].getBoundingClientRect();
+  var mouse = {x: 0, y: 0, moved: false};
 
-var rect = $('#container')[0].getBoundingClientRect();
-var mouse = {x: 0, y: 0, moved: false};
+  $("#container").mousemove(function(e) {
 
-$("#container").mousemove(function(e) {
+    mouse.moved = true;
 
-  mouse.moved = true;
-
-  mouse.x = e.clientX - rect.left;
-  mouse.y = e.clientY - rect.top;
-});
- 
-TweenLite.ticker.addEventListener('tick', function(){
-  if (mouse.moved){    
-    parallaxIt(".slide", -100);
-    parallaxIt("img", -30);
-  }
-  mouse.moved = false;
-});
-
-function parallaxIt(target, movement) {
-  TweenMax.to(target, 0.3, {
-    x: (mouse.x - rect.width / 2) / rect.width * movement,
-    y: (mouse.y - rect.height / 2) / rect.height * movement
+    mouse.x = e.clientX - rect.left;
+    mouse.y = e.clientY - rect.top;
   });
+  
+  TweenLite.ticker.addEventListener('tick', function(){
+    if (mouse.moved){    
+      parallaxIt(".slide", -50);
+      parallaxIt("img", -15);
+    }
+    mouse.moved = false;
+  });
+
+  function parallaxIt(target, movement) {
+    TweenMax.to(target, 0.3, {
+      x: (mouse.x - rect.width / 2) / rect.width * movement,
+      y: (mouse.y - rect.height / 2) / rect.height * movement
+    });
+  }
+
+  $(window).on('resize scroll', function(){
+    rect = $('#container')[0].getBoundingClientRect();
+  })
 }
 
-$(window).on('resize scroll', function(){
-  rect = $('#container')[0].getBoundingClientRect();
-})
