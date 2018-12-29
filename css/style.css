@@ -565,6 +565,8 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
 .talks {
   margin: 5% 10%;
   padding-bottom: 6rem;
+  -webkit-animation: fadein 3s;
+  animation: fadein 3s;
 }
 
 .talks h1 {
