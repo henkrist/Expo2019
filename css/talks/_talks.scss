@@ -1,40 +1,69 @@
-
-.back_icon{
+.back_icon {
     position: fixed;
     height: 30px;
     width: 30px;
     margin: 30px;
     cursor: pointer;
+    top: 1rem;
+    left: 1rem;
 
     transition: all 0.2;
 
     -webkit-transition: -webkit-transform .4s ease-in-out;
-    transition: transform .4s ease-in-out;   
+    transition: transform .4s ease-in-out;
 }
 
-.back_icon:hover{
+.back_icon:hover {
     //-webkit-transform: rotate(360deg);
     //transform: rotate(360deg);
     -webkit-transform: translateX(-5px);
     transform: translateX(-5px);
 }
 
-.talks_header{
-    cursor: default;
-    position: absolute;
-    bottom: 20px;
-    left: 10%;
+.talks {
     
-    h1{
-        font-size: 15vw;
+    margin: 5% 10%;
+    padding-bottom: 6rem;
+    -webkit-animation: fadein 3s;
+    animation: fadein 3s;
+    h1 {
+        cursor: default;
+        font-size: 10vw;
 
-        #talks{
+        #talks {
             color: #f35626;
             background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             -webkit-animation: hue 15s infinite linear;
-            transition: 0.5s;
+            transition: color 0.5s;
+        }
+    }
+    p {
+        width: 70ch;
+    }
+    ul {
+        padding-left: 0;
+        li {
+            padding: 1rem;
+            border-radius: 10px;
+            background-color: $color-2;
+            display: block;
+            max-width: $M;
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+            list-style-type: none;
+            font-size: 2rem;
+            margin: 0 1rem 1rem 0;
+            @media screen and (max-width: $SM) {
+                font-size: 1.2rem;
+            }
+
+            &.pause {
+                opacity: 0.6;
+            }
+            div {
+                font-size: 1rem;
+            }
         }
     }
 

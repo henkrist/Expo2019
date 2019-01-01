@@ -547,6 +547,8 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
   width: 30px;
   margin: 30px;
   cursor: pointer;
+  top: 1rem;
+  left: 1rem;
   -webkit-transition: all 0.2;
   transition: all 0.2;
   -webkit-transition: -webkit-transform .4s ease-in-out;
@@ -560,25 +562,61 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
   transform: translateX(-5px);
 }
 
-.talks_header {
+.talks {
+  margin: 5% 10%;
+  padding-bottom: 6rem;
+  -webkit-animation: fadein 3s;
+  animation: fadein 3s;
+}
+
+.talks h1 {
   cursor: default;
-  position: absolute;
-  bottom: 20px;
-  left: 10%;
+  font-size: 10vw;
 }
 
-.talks_header h1 {
-  font-size: 15vw;
-}
-
-.talks_header h1 #talks {
+.talks h1 #talks {
   color: #f35626;
   background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: hue 15s infinite linear;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.talks p {
+  width: 70ch;
+}
+
+.talks ul {
+  padding-left: 0;
+}
+
+.talks ul li {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #f0f8ff;
+  display: block;
+  max-width: 800px;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+  list-style-type: none;
+  font-size: 2rem;
+  margin: 0 1rem 1rem 0;
+}
+
+@media screen and (max-width: 600px) {
+  .talks ul li {
+    font-size: 1.2rem;
+  }
+}
+
+.talks ul li.pause {
+  opacity: 0.6;
+}
+
+.talks ul li div {
+  font-size: 1rem;
 }
 
 .index-cont {
