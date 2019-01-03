@@ -144,7 +144,7 @@ h3 {
   text-align: right;
   right: 20px;
   top: 0;
-  z-index: 500;
+  z-index: 1000;
   font-size: 1.3em;
   font-weight: bold;
   letter-spacing: 2px;
@@ -702,7 +702,7 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
   text-align: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  height: 300px;
+  margin-bottom: 5%;
 }
 
 #tema #tema_txt {
@@ -880,6 +880,12 @@ body {
   }
   .wrapper {
     width: 100%;
+  }
+  .cd-section p {
+    font-size: 3vw;
+  }
+  .cd-section h1 {
+    font-size: 4vw;
   }
 }
 
