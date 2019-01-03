@@ -1,6 +1,29 @@
 
 .index-cont{
-    padding-top: 20vw;
+    position: relative;
+    top: 10vh;
+
+    margin-bottom: 30px;
+
+    #tema{
+        position: relative;
+        padding-top: 100vh;
+    }
+
+
+}
+
+
+.cont{
+    padding: 20px;
+    border-radius: 10px;
+    background-color: $color-2;
+    max-width: $M;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+
+    h1{
+        font-size: 30px;
+    }
 }
 
 #container {
@@ -24,25 +47,26 @@
     img{
         width: 70vw;
     }
-
 }
-
+#slogan{
+    position: relative;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 90%;
+    height: auto;
+}
 
 #tema{
     text-align: center;
     align-content: center;
     height: 300px;
 
-    #slogan{
-        padding: 10px;
-        margin: auto;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+    #tema_txt{
+        margin: 0 auto;
         width: 100%;
-        height: auto;
-    }
+        padding-top: 30px;
+    }  
 }
 
 

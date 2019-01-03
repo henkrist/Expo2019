@@ -105,6 +105,9 @@
 .cd-section {
   width: 70vw;
   margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #cd-front {
@@ -420,7 +423,6 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
   background-color: #f0f8ff;
   margin: auto;
   text-align: center;
-  opacity: 0.8;
   position: relative;
   -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
@@ -620,7 +622,34 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
 }
 
 .index-cont {
-  padding-top: 20vw;
+  position: relative;
+  top: 10vh;
+  margin-bottom: 30px;
+}
+
+.index-cont #tema {
+  position: relative;
+  padding-top: 100vh;
+}
+
+#index_om {
+  cursor: default;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cont {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f0f8ff;
+  max-width: 800px;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cont h1 {
+  font-size: 30px;
 }
 
 #container {
@@ -654,6 +683,15 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
   width: 70vw;
 }
 
+#slogan {
+  position: relative;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 90%;
+  height: auto;
+}
+
 #tema {
   text-align: center;
   -ms-flex-line-pack: center;
@@ -661,15 +699,10 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
   height: 300px;
 }
 
-#tema #slogan {
-  padding: 10px;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+#tema #tema_txt {
+  margin: 0 auto;
   width: 100%;
-  height: auto;
+  padding-top: 30px;
 }
 
 #map {
