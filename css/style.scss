@@ -10,6 +10,9 @@
 
 // Primary style
 html{
+    a{
+        transition: all 0.3s;
+    }
     a:hover, a:visited, a:link, a:active{
         text-decoration: none;
     }
@@ -60,6 +63,10 @@ body{
 		display: none;
     }
 
+    .back_icon{
+        display: none;
+    }
+
     .nav_mobile{
         display: block;
     }
@@ -87,6 +94,10 @@ body{
     }
 	.nav_desktop {
 		display: none;
+    }
+
+    .back_icon{
+        display: none;
     }
     .nav_mobile{
         display: block;

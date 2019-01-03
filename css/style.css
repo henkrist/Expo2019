@@ -498,6 +498,17 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
   font-size: 14px;
 }
 
+.event_cont .link_text {
+  text-decoration: none;
+  color: #23A6D5;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.event_cont .link_text:hover {
+  color: coral;
+}
+
 .event_cont .event_btn {
   display: block;
   margin: 0 auto;
@@ -625,18 +636,13 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
   position: relative;
   top: 10vh;
   margin-bottom: 30px;
+  -webkit-animation: fadein 3s;
+  animation: fadein 3s;
 }
 
 .index-cont #tema {
   position: relative;
   padding-top: 100vh;
-}
-
-#index_om {
-  cursor: default;
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
 }
 
 .cont {
@@ -810,6 +816,11 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
   animation: fadein 2s;
 }
 
+html a {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
 html a:hover, html a:visited, html a:link, html a:active {
   text-decoration: none;
 }
@@ -852,6 +863,9 @@ body {
   .nav_desktop {
     display: none;
   }
+  .back_icon {
+    display: none;
+  }
   .nav_mobile {
     display: block;
   }
@@ -874,6 +888,9 @@ body {
     width: 100%;
   }
   .nav_desktop {
+    display: none;
+  }
+  .back_icon {
     display: none;
   }
   .nav_mobile {

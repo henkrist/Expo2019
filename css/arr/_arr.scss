@@ -172,6 +172,16 @@
         font-size: 14px;
     }
 
+    .link_text{
+        text-decoration: none;
+        color: $color-7;
+        transition: all .3s;
+    }
+
+    .link_text:hover{
+        color: $color-1;
+    }
+
     .event_btn{
         display: block;
         margin: 0 auto;
