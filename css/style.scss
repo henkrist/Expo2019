@@ -80,6 +80,17 @@ body{
         width: 300px;
     }
 
+    .index_cont{
+        align-content: center;
+    }
+    
+    .cont{ 
+        clear:both;    
+    }
+    .cont:nth-of-type(2n){
+         clear: both;
+    }
+
     .back_icon{
         display: none;
     }
@@ -146,6 +157,9 @@ body{
         font-size: 2.5vw; 
     }
 
+    .index_cont{
+        align-items: center;
+    }
     .cont{
         width: 400px;
     }

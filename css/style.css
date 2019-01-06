@@ -898,6 +898,16 @@ body {
   .cont {
     width: 300px;
   }
+  .index_cont {
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .cont {
+    clear: both;
+  }
+  .cont:nth-of-type(2n) {
+    clear: both;
+  }
   .back_icon {
     display: none;
   }
@@ -952,6 +962,11 @@ body {
   }
   .event_info_text {
     font-size: 2.5vw;
+  }
+  .index_cont {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .cont {
     width: 400px;
