@@ -22,6 +22,12 @@ html{
     }
 }
 
+p{
+    a{
+        color: $color-2;
+    }
+}
+
 body{
     height: 100%;
     position: relative;

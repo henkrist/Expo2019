@@ -841,6 +841,10 @@ html a:hover {
   color: #f35626;
 }
 
+p a {
+  color: #f0f8ff;
+}
+
 body {
   height: 100%;
   position: relative;
