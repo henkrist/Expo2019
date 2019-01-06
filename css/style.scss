@@ -6,6 +6,7 @@
 @import 'talks/_talks.scss';
 @import 'index/_index.scss';
 @import 'contact/_contact.scss';
+@import 'footer/footer';
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
 // Primary style
@@ -22,6 +23,8 @@ html{
 }
 
 body{
+    height: 100%;
+    position: relative;
     font-family: $default-font;
     background: $gradient-1;
     background-size: 400% 400%;
@@ -67,6 +70,10 @@ body{
 		display: none;
     }
 
+    .cont{
+        width: 300px;
+    }
+
     .back_icon{
         display: none;
     }
@@ -88,6 +95,9 @@ body{
     
     .wrapper{
         width: 100%;
+        p{
+            font-size: 13px;
+        }
     }
 
     .cd-section{

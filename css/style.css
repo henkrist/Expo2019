@@ -635,7 +635,9 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
 .index-cont {
   position: relative;
   top: 10vh;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  width: 80%;
+  margin: 0 auto;
   -webkit-animation: fadein 3s;
   animation: fadein 3s;
 }
@@ -646,16 +648,26 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
 }
 
 .cont {
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #f0f8ff;
-  max-width: 800px;
-  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  /*border-radius: 10px;
+    background-color: $color-2;
+    max-width: $M;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);*/
+  width: 500px;
 }
 
 .cont h1 {
   font-size: 30px;
+}
+
+.cont {
+  float: left;
+  clear: both;
+}
+
+.cont:nth-of-type(2n) {
+  float: right;
+  text-align: right;
 }
 
 #container {
@@ -830,8 +842,10 @@ html a:hover {
 }
 
 body {
+  height: 100%;
+  position: relative;
   font-family: "Montserrat";
-  background: linear-gradient(-45deg, #fdeaaf, #b99db3, #78c7c6, #badab2);
+  background: linear-gradient(-225deg, #fdeaaf, #b99db3, #78c7c6, #badab2);
   background-size: 400% 400%;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -866,6 +880,9 @@ body {
   .nav_desktop {
     display: none;
   }
+  .cont {
+    width: 300px;
+  }
   .back_icon {
     display: none;
   }
@@ -883,6 +900,9 @@ body {
   }
   .wrapper {
     width: 100%;
+  }
+  .wrapper p {
+    font-size: 13px;
   }
   .cd-section p {
     font-size: 3vw;

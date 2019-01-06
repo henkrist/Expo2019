@@ -3,7 +3,10 @@
     position: relative;
     top: 10vh;
 
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    width: 80%;
+    margin: 0 auto;
+
 
     #tema{
         position: relative;
@@ -17,15 +20,26 @@
 
 
 .cont{
-    padding: 20px;
-    border-radius: 10px;
+    padding: 10px;
+    /*border-radius: 10px;
     background-color: $color-2;
     max-width: $M;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);*/
+
+    width: 500px;
 
     h1{
         font-size: 30px;
     }
+}
+
+.cont{
+    float:left;  
+    clear:both;    
+}
+.cont:nth-of-type(2n){
+     float:right;
+     text-align: right;
 }
 
 #container {
