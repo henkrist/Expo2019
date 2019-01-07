@@ -8,12 +8,10 @@
   
 .dates { 
     grid-area: dates; 
-   //@at-root background-color: red;
 }
 
 .events { 
     grid-area: events; 
-   // background-color: blue;
     align-content: middle;
     text-align: center;
     overflow: auto;
@@ -22,13 +20,11 @@
 .zero { 
     grid-area: zero; 
     z-index: -1;
-    //background-color: green;
 }
 
 //dates
 .cd_dates {
     height: 100vh;
-    //transform: translateX(5%);
     text-align: center;
     position: fixed;
 
@@ -91,16 +87,6 @@
     a.active{
         color: red;
     }
-    /*
-    active{
-        color: $color-2;
-        border-color: $color-1;
-        background-color: $color-1;
-        transform: translateY(-5px);
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
-        cursor: default;
-    }
-    */
 
     -webkit-animation: fadein 2s; 
     animation: fadein 2s;
@@ -116,7 +102,6 @@
     background-color: $color-2;
     margin: auto;
     text-align: center;
-    //opacity: 0.8;
     position: relative;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
 
@@ -144,7 +129,6 @@
     }
     
     .event_time_place{
-        //background-color: blue;
         margin: 0 auto;
         height: 30px;
         width: 300px;

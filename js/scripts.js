@@ -36,67 +36,40 @@ function goBack() {
 
 // scrolling til event og endre nav
 
-var sections = $('.event_date')
-  , nav = $('#vertical-nav')
-  , nav_height = nav.outerHeight();
-
-$(window).on('scroll', function () {
-  var cur_pos = $(this).scrollTop();
-  
-  sections.each(function() {
-    var top = $(this).offset().top - nav_height,
-        bottom = top + $(this).outerHeight();
-    
-    if (cur_pos >= top && cur_pos <= bottom) {
-      nav.find('a').removeClass('current');
-      sections.removeClass('current');
-      $(this).addClass('current');
-      nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('current');
-    }
-  });
+$(document).ready(function(){
+	var contentSection = $('.event_date');
+	var navigation = $('#vertical-nav');
+	
+	navigation.on('click', 'a', function(event){
+		event.preventDefault();
+		smoothScroll($(this.hash));
+	});
+	
+	$(window).on('scroll', function(){
+		updateNavigation();
+	})
+	updateNavigation();
+	
+	function updateNavigation(){
+		contentSection.each(function(){
+			var sectionName = $(this).attr('id');
+			var navigationMatch = $('a[href="#' + sectionName + '"]');
+			if( ($(this).offset().top - $(window).height()/8 < $(window).scrollTop()) &&
+				  ($(this).offset().top + $(this).height() - $(window).height()/8 > $(window).scrollTop()))
+				{
+					navigationMatch.addClass('current');
+				}
+			else {
+				navigationMatch.removeClass('current');
+			}
+		});
+	}
+	function smoothScroll(target){
+		$('body,html').animate({
+			scrollTop: target.offset().top -50 
+		}, 600);
+	}
 });
-
-
-nav.find('a').on('click', function () {
-  var $el = $(this)
-    , id = $el.attr('href');
-  
-  $('html, body').animate({
-    scrollTop: $(id).offset().top - 50
-  }, 700);
-  
-  return false;
-});
-
-
-// andre forsøk
-
-/*
-
-let mainNavLinks = document.querySelectorAll("a");
-let mainSections = document.querySelectorAll("event_date");
-
-let lastId;
-let cur = [];
-
-window.addEventListener("scroll", event => {
-  let fromTop = window.scrollY;
-
-  mainNavLinks.forEach(link => {
-    let section = document.querySelector(link.hash);
-
-    if (
-      section.offsetTop <= fromTop &&
-      section.offsetTop + section.offsetHeight > fromTop
-    ) {
-      link.classList.add("current");
-    } else {
-      link.classList.remove("current");
-    }
-  });
-});
-
-*/
 
 
 // map

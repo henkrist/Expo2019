@@ -341,16 +341,6 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
   height: 100vh;
   text-align: center;
   position: fixed;
-  /*
-    active{
-        color: $color-2;
-        border-color: $color-1;
-        background-color: $color-1;
-        transform: translateY(-5px);
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
-        cursor: default;
-    }
-    */
   -webkit-animation: fadein 2s;
   animation: fadein 2s;
 }
@@ -384,7 +374,7 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
   transition: 0.3s;
 }
 
-.cd_dates .state li {
+.cd_dates .current li {
   border-color: coral;
 }
 
@@ -656,7 +646,7 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
 }
 
 .cont {
-  padding: 20px;
+  padding: 40px;
   margin-top: 30px;
   margin-bottom: 20px;
   border-radius: 10px;
