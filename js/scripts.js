@@ -36,7 +36,7 @@ function goBack() {
 
 // scrolling til event og endre nav
 
-var sections = $('.events')
+var sections = $('.event_date')
   , nav = $('#vertical-nav')
   , nav_height = nav.outerHeight();
 
@@ -48,14 +48,14 @@ $(window).on('scroll', function () {
         bottom = top + $(this).outerHeight();
     
     if (cur_pos >= top && cur_pos <= bottom) {
-      nav.find('a').removeClass('active');
-      sections.removeClass('active');
-      
-      $(this).addClass('active');
-      nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+      nav.find('a').removeClass('current');
+      sections.removeClass('current');
+      $(this).addClass('current');
+      nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('current');
     }
   });
 });
+
 
 nav.find('a').on('click', function () {
   var $el = $(this)
@@ -68,6 +68,35 @@ nav.find('a').on('click', function () {
   return false;
 });
 
+
+// andre forsøk
+
+/*
+
+let mainNavLinks = document.querySelectorAll("a");
+let mainSections = document.querySelectorAll("event_date");
+
+let lastId;
+let cur = [];
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach(link => {
+    let section = document.querySelector(link.hash);
+
+    if (
+      section.offsetTop <= fromTop &&
+      section.offsetTop + section.offsetHeight > fromTop
+    ) {
+      link.classList.add("current");
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+*/
 
 
 // map

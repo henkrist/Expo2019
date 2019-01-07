@@ -58,6 +58,12 @@
         transition: 0.3s;
     }
 
+    .current{
+        li{
+            border-color: $color-1;
+        }
+    }
+    
     .date{
         position: relative;
         color: $color-4;

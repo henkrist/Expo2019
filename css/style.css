@@ -384,6 +384,10 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
   transition: 0.3s;
 }
 
+.cd_dates .state li {
+  border-color: coral;
+}
+
 .cd_dates .date {
   position: relative;
   color: #151515;
@@ -896,7 +900,7 @@ body {
     display: none;
   }
   .cont {
-    width: 300px;
+    width: 100%;
   }
   .index_cont {
     -ms-flex-line-pack: center;
@@ -969,13 +973,19 @@ body {
             align-items: center;
   }
   .cont {
-    width: 400px;
+    width: 100%;
   }
   #bg {
     max-height: 70%;
   }
   .contact {
     width: 100vw;
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+  .cd-section {
+    width: 60vw;
   }
 }
 /*# sourceMappingURL=style.css.map */

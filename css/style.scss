@@ -77,7 +77,7 @@ body{
     }
 
     .cont{
-        width: 300px;
+        width: 100%;
     }
 
     .index_cont{
@@ -161,7 +161,7 @@ body{
         align-items: center;
     }
     .cont{
-        width: 400px;
+        width: 100%;
     }
 
     #bg{
@@ -174,5 +174,9 @@ body{
 }
 
 
-@media only screen and (max-width: $L){
+@media only screen and (min-width: $L){
+
+    .cd-section{
+        width: 60vw;
+    }
 }
