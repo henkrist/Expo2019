@@ -535,6 +535,13 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
           box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
+.event_cont img {
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+  margin-top: 0;
+}
+
 #expo_talks {
   background-color: #ffefe1;
 }

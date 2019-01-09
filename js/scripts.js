@@ -54,8 +54,8 @@ $(document).ready(function(){
 		contentSection.each(function(){
 			var sectionName = $(this).attr('id');
 			var navigationMatch = $('a[href="#' + sectionName + '"]');
-			if( ($(this).offset().top - $(window).height()/8 < $(window).scrollTop()) &&
-				  ($(this).offset().top + $(this).height() - $(window).height()/8 > $(window).scrollTop()))
+			if( ($(this).offset().top - $(window).height()/4 < $(window).scrollTop()) &&
+				  ($(this).offset().top + $(this).height() - $(window).height()/4 > $(window).scrollTop()))
 				{
 					navigationMatch.addClass('current');
 				}
@@ -70,6 +70,34 @@ $(document).ready(function(){
 		}, 600);
 	}
 });
+
+
+// andre forsøk
+
+/*
+var target = this.hash; // gets the #hash
+$target = $(target); //
+$('html, body').stop().animate({
+    'scrollTop': $target.offset().top+2 // scrolls to the link
+}, 500, 'swing', function () {
+    window.location.hash = target;
+    $(document).on("scroll", onScroll);
+});
+
+function onScroll(event){
+    var scrollPosition = $(document).scrollTop();
+    $('ul li a').each(function () {
+        var currentLink = $(this);
+        var refElement = $(currentLink.attr("href"));
+        if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+            $('ul liv a.current').removeClass('current');
+            $(this).addClass('current');
+        }
+        else{
+            currentLink.removeClass("current");
+        }
+    });
+}*/
 
 
 // map
@@ -97,9 +125,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
   var mouse = {x: 0, y: 0, moved: false};
 
   $("#container").mousemove(function(e) {
-
     mouse.moved = true;
-
     mouse.x = e.clientX - rect.left;
     mouse.y = e.clientY - rect.top;
   });
