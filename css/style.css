@@ -376,6 +376,11 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
 
 .cd_dates .current li {
   border-color: coral;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+  background-color: #f0f8ff;
 }
 
 .cd_dates .date {
