@@ -131,6 +131,13 @@ body{
             font-size: 4vw; 
         }
     }
+
+    .resize {
+        width: 100px;
+        height: 100px;
+    }
+
+    .infobox{}
 }
 
 @media only screen and (max-width: $M){
