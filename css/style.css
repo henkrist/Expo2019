@@ -443,6 +443,10 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
       grid-template-areas: ". . .";
   -ms-flex-line-pack: middle;
       align-content: middle;
+  -webkit-box-align: middle;
+      -ms-flex-align: middle;
+          align-items: middle;
+  text-align: middle;
 }
 
 .event_cont .event_header {
@@ -454,7 +458,7 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
 .event_cont .event_time_place {
   margin: 0 auto;
   height: 30px;
-  width: 300px;
+  width: 150px;
 }
 
 .event_cont .event_divider {
@@ -467,20 +471,7 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
   height: 25px;
   background-color: coral;
   border-radius: 2px;
-  -webkit-transform: translateX(48.5px);
-          transform: translateX(48.5px);
-}
-
-.event_cont .event_time {
-  float: right;
-  -webkit-transform: translateX(50px);
-          transform: translateX(50px);
-}
-
-.event_cont .event_place {
-  float: left;
-  -webkit-transform: translateX(-50px);
-          transform: translateX(-50px);
+  margin: 0 auto;
 }
 
 .event_cont .event_info {
@@ -877,6 +868,12 @@ body {
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent;
+}
+
+@media only screen and (max-width: 300px), screen and (max-height: 400px) {
+  .event_time_place {
+    width: 150px;
+  }
 }
 
 @media only screen and (max-width: 480px), screen and (max-height: 400px) {

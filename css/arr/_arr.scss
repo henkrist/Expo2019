@@ -120,6 +120,8 @@
         grid-template-rows: 1fr;
         grid-template-areas: ". . .";
         align-content: middle;
+        align-items: middle;
+        text-align: middle;
     }
 
     .event_header{
@@ -131,26 +133,27 @@
     .event_time_place{
         margin: 0 auto;
         height: 30px;
-        width: 300px;
+        width: 150px;
     }
     .event_divider{
         height: 100%;
         width: 100%;
     }
+
     .divider{
         width: 3px;
         height: 25px;
         background-color: $color-1;
         border-radius: 2px;
-        transform: translateX(50px - 3px/2);
+        margin: 0 auto;
+        //transform: translateX(50px - 3px/2);
     }
     .event_time{
-        float: right;
-        transform: translateX(50px);
+       // transform: translateX(50px);
     }
     .event_place{
-        float: left;
-        transform: translateX(-50px);
+        //float: left;
+       // transform: translateX(-50px);
     }
 
     .event_info{

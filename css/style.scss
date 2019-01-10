@@ -55,6 +55,12 @@ body{
 
 // Media quieries
 
+@media only screen and (max-width: $XS), screen and (max-height: 400px){
+    .event_time_place{
+        width: 150px;
+    }
+}
+
 @media only screen and (max-width: $S), screen and (max-height: 400px){
 
     .grid-container{
@@ -125,7 +131,6 @@ body{
             font-size: 4vw; 
         }
     }
-
 }
 
 @media only screen and (max-width: $M){
