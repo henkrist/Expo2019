@@ -56,7 +56,6 @@
 
     .current{
         li{
-            border-color: $color-1;
             transform: translateY(-5px);
             box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
             background-color: $color-2;
@@ -78,8 +77,8 @@
 
     .cont_date:not(.selected):hover{
         background-color: $color-2;
-        transform: translateY(-5px);
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+        //transform: translateY(-5px);
+       // box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
     }
 
     .today{

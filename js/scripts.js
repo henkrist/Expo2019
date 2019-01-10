@@ -54,8 +54,8 @@ $(document).ready(function(){
 		contentSection.each(function(){
 			var sectionName = $(this).attr('id');
 			var navigationMatch = $('a[href="#' + sectionName + '"]');
-			if( ($(this).offset().top - $(window).height()/9 < $(window).scrollTop()) &&
-				  ($(this).offset().top + $(this).height() - $(window).height()/8 > $(window).scrollTop()))
+			if( ($(this).offset().top - $(window).height()/2 < $(window).scrollTop()) &&
+				  ($(this).offset().top + $(this).height() - $(window).height()/9 > $(window).scrollTop()))
 				{
 					navigationMatch.addClass('current');
 				}
@@ -66,7 +66,7 @@ $(document).ready(function(){
 	}
 	function smoothScroll(target){
 		$('body,html').animate({
-			scrollTop: target.offset().top - ($(window).height()/9 - 5)
+			scrollTop: target.offset().top - ($(window).height()/9)
 		}, 600);
 	}
 });
