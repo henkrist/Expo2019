@@ -13,20 +13,32 @@ function changeCurrentDay(){
     expo[7] = "6";
 
     var dayNumber = d.getDate();
-    //var dayNumber = 28;
+    //var dayNumber = 6;
 
-    var allDates = document.querySelectorAll(".cont_date");
+    var allDates = document.querySelectorAll(".date_link");
+    var day = document.querySelector('a[href="#' + dayNumber + '"]');
 
     for(var i=0; i<expo.length; i++){
         if(expo[i] == dayNumber){
-            var day = document.getElementById(dayNumber);
-            day.classList.add("today");
+            day.className += " " + "today";
+
         }else{
             if(allDates[i].classList.contains(".today")){
                 allDates[i].classList.remove(".today");
             }
         }
     }
+    //return day;
+
+    //scrollToToday(day);
+}
+
+// scroll ned til dag
+
+function scrollToToday(day){
+    $("#div1").animate({
+        scrollTop: $('#div1')[0].scrollHeight - $('#div1')[0].clientHeight
+      }, 1000);
 }
 
 //gå tilbake 
@@ -38,8 +50,8 @@ function goBack() {
 
 $(document).ready(function(){
 	var contentSection = $('.event_date');
-	var navigation = $('#vertical-nav');
-	
+    var navigation = $('#vertical-nav');
+    	
 	navigation.on('click', 'a', function(event){
 		event.preventDefault();
 		smoothScroll($(this.hash));
@@ -64,12 +76,13 @@ $(document).ready(function(){
 			}
 		});
 	}
-	function smoothScroll(target){
-		$('body,html').animate({
-			scrollTop: target.offset().top - ($(window).height()/9)
-		}, 600);
-	}
 });
+
+function smoothScroll(target){
+    $('body,html').animate({
+        scrollTop: target.offset().top - ($(window).height()/9)
+    }, 600);
+}
 
 // map
 function initMap() {

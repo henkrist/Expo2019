@@ -82,8 +82,10 @@
     }
 
     .today{
-        border: solid;
-        border-color: $color-7; 
+        li{
+            border: solid;
+            border-color: $color-7; 
+        }
     }
 
     a.active{

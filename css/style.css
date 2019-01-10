@@ -399,7 +399,7 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
   background-color: #f0f8ff;
 }
 
-.cd_dates .today {
+.cd_dates .today li {
   border: solid;
   border-color: #23A6D5;
 }
