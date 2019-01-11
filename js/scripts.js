@@ -32,7 +32,7 @@ function changeCurrentDay(){
 }
 
 //funksjon for å gråe ut tidligere arrangemnter
-
+/*
 function delPrevEvents(){
 
     var dayNumber = changeCurrentDay();
@@ -41,6 +41,7 @@ function delPrevEvents(){
     var day = document.querySelector('a[href="#' + dayNumber + '"]');
 
 }
+*/
 
 //gå tilbake 
 function goBack() {
@@ -58,11 +59,13 @@ $(document).ready(function(){
 		smoothScroll($(this.hash));
     });
     
+
     //scrolle til dag
+    /*
     var dayNumber = changeCurrentDay();
     $('html, body').animate({
         scrollTop: $('#'+dayNumber).offset().top - ($(window).height()/9)
-    }, 1000);
+    }, 1000);*/
 	
 	$(window).on('scroll', function(){
 		updateNavigation();
