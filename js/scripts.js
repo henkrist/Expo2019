@@ -13,7 +13,7 @@ function changeCurrentDay(){
     expo[7] = "6";
 
     var dayNumber = d.getDate();
-    //var dayNumber = 6;
+    //var dayNumber = 1;
 
     var allDates = document.querySelectorAll(".date_link");
     var day = document.querySelector('a[href="#' + dayNumber + '"]');
@@ -23,22 +23,13 @@ function changeCurrentDay(){
             day.className += " " + "today";
 
         }else{
-            if(allDates[i].classList.contains(".today")){
-                allDates[i].classList.remove(".today");
+            if(allDates[i].classList.contains("today")){
+                allDates[i].classList.remove("today");
             }
         }
     }
-    //return day;
-
-    //scrollToToday(day);
-}
-
-// scroll ned til dag
-
-function scrollToToday(day){
-    $("#div1").animate({
-        scrollTop: $('#div1')[0].scrollHeight - $('#div1')[0].clientHeight
-      }, 1000);
+    smoothScroll("#"+dayNumber);
+    return dayNumber;
 }
 
 //gå tilbake 
@@ -55,7 +46,14 @@ $(document).ready(function(){
 	navigation.on('click', 'a', function(event){
 		event.preventDefault();
 		smoothScroll($(this.hash));
-	});
+    });
+    
+    /*
+    $(window).load (function(){
+        var dayNumber = changeCurrentDay();
+        smoothScroll("#"+dayNumber);
+    })
+    */
 	
 	$(window).on('scroll', function(){
 		updateNavigation();
@@ -75,7 +73,9 @@ $(document).ready(function(){
 				navigationMatch.removeClass('current');
 			}
 		});
-	}
+    }
+
+
 });
 
 function smoothScroll(target){
