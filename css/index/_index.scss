@@ -48,6 +48,10 @@
      text-align: right;
 }
 
+.cont:last-child{
+    margin-bottom: 70px;
+}
+
 #container {
     position: relative;
     height: 100vh;
@@ -90,6 +94,8 @@
         padding-top: 30px;
     }  
 }
+
+
 
 
 
