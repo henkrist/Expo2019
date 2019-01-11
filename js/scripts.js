@@ -28,8 +28,18 @@ function changeCurrentDay(){
             }
         }
     }
-    smoothScroll("#"+dayNumber);
     return dayNumber;
+}
+
+//funksjon for å gråe ut tidligere arrangemnter
+
+function delPrevEvents(){
+
+    var dayNumber = changeCurrentDay();
+
+    var allDates = document.querySelectorAll(".date_link");
+    var day = document.querySelector('a[href="#' + dayNumber + '"]');
+
 }
 
 //gå tilbake 
@@ -48,12 +58,11 @@ $(document).ready(function(){
 		smoothScroll($(this.hash));
     });
     
-    /*
-    $(window).load (function(){
-        var dayNumber = changeCurrentDay();
-        smoothScroll("#"+dayNumber);
-    })
-    */
+    //scrolle til dag
+    var dayNumber = changeCurrentDay();
+    $('html, body').animate({
+        scrollTop: $('#'+dayNumber).offset().top - ($(window).height()/9)
+    }, 1000);
 	
 	$(window).on('scroll', function(){
 		updateNavigation();
@@ -75,14 +84,13 @@ $(document).ready(function(){
 		});
     }
 
+    function smoothScroll(target){
+        $('body,html').animate({
+            scrollTop: target.offset().top - ($(window).height()/9)
+        }, 600);
+    }
 
 });
-
-function smoothScroll(target){
-    $('body,html').animate({
-        scrollTop: target.offset().top - ($(window).height()/9)
-    }, 600);
-}
 
 // map
 function initMap() {
