@@ -13,7 +13,7 @@ function changeCurrentDay(){
     expo[7] = "6";
 
     var dayNumber = d.getDate();
-    var dayNumber = 31;
+    //var dayNumber = 31;
 
     var allDates = document.querySelectorAll(".date_link");
     var day = document.querySelector('a[href="#' + dayNumber + '"]');
