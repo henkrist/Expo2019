@@ -559,6 +559,8 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
   cursor: pointer;
   top: 1rem;
   left: 1rem;
+  -webkit-animation: fadein 3s;
+  animation: fadein 3s;
   -webkit-transition: all 0.2;
   transition: all 0.2;
   -webkit-transition: -webkit-transform .4s ease-in-out;

@@ -7,6 +7,9 @@
     top: 1rem;
     left: 1rem;
 
+    -webkit-animation: fadein 3s;
+    animation: fadein 3s;
+
     transition: all 0.2;
 
     -webkit-transition: -webkit-transform .4s ease-in-out;

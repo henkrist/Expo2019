@@ -6,14 +6,14 @@ function changeCurrentDay(){
     expo[0] = "28";
     expo[1] = "29";
     expo[2] = "30";
-    expo[3] = "18";
+    expo[3] = "31";
     expo[4] = "1";
     expo[5] = "4";
     expo[6] = "5";
     expo[7] = "6";
 
     var dayNumber = d.getDate();
-    //var dayNumber = 1;
+    var dayNumber = 31;
 
     var allDates = document.querySelectorAll(".date_link");
     var day = document.querySelector('a[href="#' + dayNumber + '"]');
@@ -32,16 +32,18 @@ function changeCurrentDay(){
 }
 
 //funksjon for å gråe ut tidligere arrangemnter
-/*
 function delPrevEvents(){
 
-    var dayNumber = changeCurrentDay();
-
+    var dayToday = changeCurrentDay();
     var allDates = document.querySelectorAll(".date_link");
     var day = document.querySelector('a[href="#' + dayNumber + '"]');
 
+    for(var i=0; i<allDates.length; i++){
+        
+
+    }
+
 }
-*/
 
 //gå tilbake 
 function goBack() {
@@ -58,15 +60,7 @@ $(document).ready(function(){
 		event.preventDefault();
 		smoothScroll($(this.hash));
     });
-    
 
-    //scrolle til dag
-    /*
-    var dayNumber = changeCurrentDay();
-    $('html, body').animate({
-        scrollTop: $('#'+dayNumber).offset().top - ($(window).height()/9)
-    }, 1000);*/
-	
 	$(window).on('scroll', function(){
 		updateNavigation();
 	})
@@ -86,14 +80,23 @@ $(document).ready(function(){
 			}
 		});
     }
-
-    function smoothScroll(target){
-        $('body,html').animate({
-            scrollTop: target.offset().top - ($(window).height()/9)
-        }, 600);
-    }
-
 });
+
+//funksjon for smooth scroll
+function smoothScroll(target){
+    $('body,html').animate({
+        scrollTop: target.offset().top - ($(window).height()/9)
+    }, 600);
+}
+
+//funksjon for å scrolle ned til dagen i dag
+$(document).ready(function(){
+    var dayNumber = changeCurrentDay();
+    $('html, body').animate({
+        scrollTop: $('#'+dayNumber).offset().top - ($(window).height()/9)
+    }, 1000);
+});
+
 
 // map
 function initMap() {
@@ -112,7 +115,7 @@ $(".cd-front").delay(2000).queue(function(next) {
 }, 1000);
 
 
-// parallax
+// parallax på index
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
   
 } else {
