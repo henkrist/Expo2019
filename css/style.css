@@ -402,11 +402,19 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
 
 .cd_dates .today li {
   border: solid;
-  border-color: #23A6D5;
+  border-color: coral;
 }
 
-.cd_dates a.active {
-  color: red;
+.cd_dates .prevEventDate {
+  pointer-events: none;
+}
+
+.cd_dates .prevEventDate li {
+  border-color: gray;
+}
+
+.cd_dates .prevEventDate li .date {
+  color: gray;
 }
 
 .event_cont {
@@ -532,6 +540,10 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
   padding: 10px;
   margin: 10px;
   margin-top: 0;
+}
+
+.prevEvent .evet_cont {
+  background-color: gray;
 }
 
 #expo_talks {

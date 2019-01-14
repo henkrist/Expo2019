@@ -77,19 +77,23 @@
 
     .cont_date:not(.selected):hover{
         background-color: $color-2;
-        //transform: translateY(-5px);
-       // box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
     }
 
     .today{
         li{
             border: solid;
-            border-color: $color-7; 
+            border-color: $color-1; 
         }
     }
 
-    a.active{
-        color: red;
+    .prevEventDate{
+        pointer-events: none;
+        li{
+            border-color: gray;
+            .date{
+                color: gray;
+            }
+        }
     }
 
     -webkit-animation: fadein 2s; 
@@ -150,16 +154,8 @@
         background-color: $color-1;
         border-radius: 2px;
         margin: 0 auto;
-        //transform: translateX(50px - 3px/2);
     }
-    .event_time{
-       // transform: translateX(50px);
-    }
-    .event_place{
-        //float: left;
-       // transform: translateX(-50px);
-    }
-
+    
     .event_info{
         width: 85%;
         margin: 0 auto;
@@ -214,6 +210,13 @@
         padding: 10px;
         margin: 10px;
         margin-top: 0;
+    }
+
+}
+
+.prevEvent{
+    .evet_cont{
+        background-color: gray;
     }
 
 }

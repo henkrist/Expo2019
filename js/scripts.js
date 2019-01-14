@@ -1,20 +1,22 @@
 
+//Henter dagen i dag
+var d = new Date();
+var dayNumber = d.getDate();
+//var dayNumber = 1;
+
+//EXPO-dager
+var expo = new Array(7);
+expo[0] = "28";
+expo[1] = "29";
+expo[2] = "30";
+expo[2] = "31";
+expo[3] = "1";
+expo[4] = "4";
+expo[5] = "5";
+expo[6] = "6";
+
 //change the current day
 function changeCurrentDay(){
-    var d = new Date();
-    var expo = new Array(7);
-    expo[0] = "28";
-    expo[1] = "29";
-    expo[2] = "30";
-    expo[3] = "31";
-    expo[4] = "1";
-    expo[5] = "4";
-    expo[6] = "5";
-    expo[7] = "6";
-
-    var dayNumber = d.getDate();
-    //var dayNumber = 31;
-
     var allDates = document.querySelectorAll(".date_link");
     var day = document.querySelector('a[href="#' + dayNumber + '"]');
 
@@ -28,21 +30,25 @@ function changeCurrentDay(){
             }
         }
     }
+    //delPrevEvents();
     return dayNumber;
 }
 
 //funksjon for å gråe ut tidligere arrangemnter
 function delPrevEvents(){
 
-    var dayToday = changeCurrentDay();
-    var allDates = document.querySelectorAll(".date_link");
-    var day = document.querySelector('a[href="#' + dayNumber + '"]');
-
-    for(var i=0; i<allDates.length; i++){
-        
-
+    if(expo.includes(dayNumber)){
+        for(var i=0; i<expo.length; i++){
+            if(dayNumber == expo[i]){
+                break;
+            }
+            var day = document.querySelector('a[href="#' + expo[i] + '"]');
+            day.className += " " + "prevEventDate";
+    
+            var event = document.getElementById("_" + expo[i]);
+            event.classList.add("prevEvent");
+        }
     }
-
 }
 
 //gå tilbake 
