@@ -37,18 +37,18 @@ function changeCurrentDay(){
 //funksjon for å gråe ut tidligere arrangemnter
 function delPrevEvents(){
 
-    if(expo.includes(dayNumber)){
-        for(var i=0; i<expo.length; i++){
-            if(dayNumber == expo[i]){
-                break;
-            }
-            var day = document.querySelector('a[href="#' + expo[i] + '"]');
-            day.className += " " + "prevEventDate";
-    
-            var event = document.getElementById("_" + expo[i]);
-            event.classList.add("prevEvent");
+    for(var i=0; i<expo.length; i++){
+
+        if(dayNumber == expo[i]){
+            break;
         }
+        var day = document.querySelector('a[href="#' + expo[i] + '"]');
+        day.className += " " + "prevEventDate";
+
+        var event = document.getElementById("_" + expo[i]);
+        event.classList.add("prevEvent");
     }
+    
 }
 
 //gå tilbake 
