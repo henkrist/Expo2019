@@ -2,7 +2,7 @@
 //Henter dagen i dag
 var d = new Date();
 var dayNumber = d.getDate();
-//var dayNumber = 1;
+//var dayNumber = "5";
 
 //EXPO-dager
 var expo = new Array(7);
@@ -30,23 +30,23 @@ function changeCurrentDay(){
             }
         }
     }
-    //delPrevEvents();
+    delPrevEvents();
     return dayNumber;
 }
 
 //funksjon for å gråe ut tidligere arrangemnter
 function delPrevEvents(){
-
-    for(var i=0; i<expo.length; i++){
-
-        if(dayNumber == expo[i]){
-            break;
+    if (expo.includes(dayNumber)) {
+        for(var i=0; i<expo.length; i++){
+            if(dayNumber == expo[i]) {
+                break;
+            }
+            var day = document.querySelector('a[href="#' + expo[i] + '"]');
+            day.className += " " + "prevEventDate";
+    
+            var event = document.getElementById("_" + expo[i]);
+            event.classList.add("prevEvent");
         }
-        var day = document.querySelector('a[href="#' + expo[i] + '"]');
-        day.className += " " + "prevEventDate";
-
-        var event = document.getElementById("_" + expo[i]);
-        event.classList.add("prevEvent");
     }
     
 }
