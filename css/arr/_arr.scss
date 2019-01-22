@@ -212,13 +212,16 @@
         margin-top: 0;
     }
 
+    #utsolgt{
+        background-color: $color-3;
+        pointer-events: none;
+    }
 }
 
 .prevEvent{
     .evet_cont{
         background-color: gray;
     }
-
 }
 
 #expo_talks{

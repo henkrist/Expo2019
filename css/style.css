@@ -542,6 +542,11 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
   margin-top: 0;
 }
 
+.event_cont #utsolgt {
+  background-color: dimgray;
+  pointer-events: none;
+}
+
 .prevEvent .evet_cont {
   background-color: gray;
 }
