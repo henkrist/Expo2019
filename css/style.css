@@ -544,7 +544,13 @@ label a a:hover, label a a:visited, label a a:link, label a a:active {
 
 .event_cont #utsolgt {
   background-color: dimgray;
-  pointer-events: none;
+}
+
+.event_cont #utsolgt:hover {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 }
 
 .prevEvent .evet_cont {
